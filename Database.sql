@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2017 at 03:55 PM
+-- Generation Time: Jun 19, 2017 at 03:49 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -19,24 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `waybilling`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `carordersblank`
---
-
-CREATE TABLE `carordersblank` (
-  `ID` varchar(10) DEFAULT NULL,
-  `Origin` varchar(10) DEFAULT NULL,
-  `Destination` varchar(10) DEFAULT NULL,
-  `CarType` varchar(10) DEFAULT NULL,
-  `Number` varchar(10) DEFAULT NULL,
-  `WinterDifference` varchar(10) DEFAULT NULL,
-  `SpringDifference` varchar(10) DEFAULT NULL,
-  `SummerDifference` varchar(10) DEFAULT NULL,
-  `FallDifference` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
@@ -339,169 +321,6 @@ CREATE TABLE `currentcarorders` (
   `Qty` int(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
---
--- Dumping data for table `currentcarorders`
---
-
-INSERT INTO `currentcarorders` (`ID`, `Origin`, `Destination`, `CarType`, `Qty`) VALUES
-('', 106, 59, 'X', 1),
-('', 110, 67, 'R', 2),
-('', 106, 68, 'X', 2),
-('', 107, 68, 'X', 2),
-('', 110, 69, 'X', 10),
-('', 108, 70, 'X', 1),
-('', 110, 72, 'R', 2),
-('', 107, 73, 'X', 2),
-('', 106, 79, 'X', 1),
-('', 108, 83, 'X', 3),
-('', 108, 86, 'X', 1),
-('', 109, 86, 'X', 3),
-('', 109, 89, 'X', 2),
-('', 111, 91, 'X', 1),
-('', 106, 121, 'X', 2),
-('', 106, 96, 'R', 1),
-('', 107, 96, 'R', 2),
-('', 102, 48, 'X', 1),
-('', 60, 106, 'X', 1),
-('', 63, 107, 'X', 1),
-('', 67, 106, 'X', 2),
-('', 70, 106, 'X', 1),
-('', 83, 106, 'X', 1),
-('', 83, 111, 'X', 1),
-('', 109, 124, 'H', 3),
-('', 107, 66, 'X', 2),
-('', 108, 56, 'X', 1),
-('', 109, 101, 'G', 1),
-('', 59, 106, 'X', 1),
-('', 91, 107, 'X', 1),
-('', 56, 108, 'X', 1),
-('', 66, 107, 'X', 1),
-('', 134, 111, 'X', 1),
-('', 134, 107, 'X', 1),
-('', 111, 72, 'K', 2),
-('', 118, 71, 'T', 10),
-('', 106, 128, 'X', 1),
-('', 107, 128, 'X', 1),
-('', 111, 128, 'X', 1),
-('', 107, 65, 'G', 1),
-('', 109, 95, 'X', 3),
-('', 87, 109, 'X', 1),
-('', 48, 102, 'X', 1),
-('', 101, 107, 'X', 1),
-('', 106, 116, 'X', 1),
-('', 110, 96, 'R', 15),
-('', 106, 137, 'LO', 2),
-('', 133, 139, 'G', 1),
-('', 108, 104, 'X', 1),
-('', 105, 106, 'H', 12),
-('', 204, 108, 'X', 1),
-('', 208, 82, 'H', 1),
-('', 106, 205, 'X', 1),
-('', 106, 77, 'X', 1),
-('', 109, 96, 'R', 5),
-('', 111, 96, 'R', 8),
-('', 106, 95, 'X', 10),
-('', 108, 95, 'X', 6),
-('', 107, 95, 'X', 4),
-('', 111, 95, 'X', 3),
-('', 110, 95, 'X', 3),
-('', 201, 95, 'X', 5),
-('', 80, 95, 'X', 1),
-('', 85, 95, 'X', 2),
-('', 78, 95, 'X', 2),
-('', 94, 95, 'X', 1),
-('', 48, 95, 'X', 3),
-('', 102, 95, 'X', 1),
-('', 95, 106, 'X', 10),
-('', 95, 108, 'X', 6),
-('', 95, 107, 'X', 4),
-('', 95, 111, 'X', 3),
-('', 95, 110, 'X', 3),
-('', 95, 48, 'X', 3),
-('', 95, 102, 'X', 1),
-('', 95, 201, 'X', 5),
-('', 95, 78, 'X', 2),
-('', 95, 80, 'X', 1),
-('', 95, 85, 'X', 2),
-('', 95, 94, 'X', 1),
-('', 133, 139, 'X', 1),
-('', 91, 110, 'X', 1),
-('', 76, 79, 'H', 1),
-('', 76, 91, 'H', 1),
-('', 109, 103, 'H', 2),
-('', 76, 106, 'H', 14),
-('', 71, 140, 'T', 6),
-('', 71, 124, 'T', 2),
-('', 71, 106, 'T', 4),
-('', 71, 107, 'T', 2),
-('', 71, 107, 'X', 1),
-('', 71, 106, 'X', 2),
-('', 71, 109, 'X', 1),
-('', 71, 108, 'X', 1),
-('', 70, 111, 'X', 1),
-('', 69, 50, 'X', 1),
-('', 69, 109, 'X', 2),
-('', 69, 106, 'X', 8),
-('', 69, 107, 'X', 3),
-('', 69, 108, 'X', 2),
-('', 109, 67, 'R', 2),
-('', 107, 67, 'R', 1),
-('', 140, 91, 'T', 1),
-('', 140, 106, 'T', 2),
-('', 140, 107, 'T', 2),
-('', 140, 109, 'T', 1),
-('', 140, 106, 'X', 1),
-('', 108, 81, 'X', 1),
-('', 83, 107, 'X', 1),
-('', 108, 84, 'X', 1),
-('', 84, 106, 'X', 1),
-('', 87, 107, 'X', 1),
-('', 108, 87, 'X', 1),
-('', 111, 49, 'X', 1),
-('', 109, 49, 'G', 1),
-('', 109, 49, 'F', 1),
-('', 49, 106, 'X', 1),
-('', 49, 107, 'X', 2),
-('', 59, 111, 'X', 1),
-('', 106, 60, 'X', 1),
-('', 104, 206, 'X', 1),
-('', 109, 62, 'H', 13),
-('', 106, 207, 'LO', 4),
-('', 206, 106, 'X', 1),
-('', 206, 107, 'X', 1),
-('', 206, 108, 'X', 1),
-('', 206, 111, 'X', 1),
-('', 206, 106, 'LO', 15),
-('', 206, 107, 'LO', 13),
-('', 206, 109, 'LO', 2),
-('', 206, 108, 'LO', 6),
-('', 110, 63, 'T', 1),
-('', 65, 106, 'X', 1),
-('', 95, 109, 'X', 3),
-('', 110, 92, 'X', 1),
-('', 107, 57, 'H', 2),
-('', 68, 106, 'X', 2),
-('', 76, 109, 'H', 3),
-('', 71, 75, 'T', 2),
-('', 74, 106, 'X', 1),
-('', 89, 106, 'X', 1),
-('', 59, 106, 'G', 1),
-('', 110, 55, 'X', 1),
-('', 106, 57, 'T', 2),
-('', 109, 97, 'X', 1),
-('', 108, 146, 'X', 1),
-('', 106, 204, 'X', 1),
-('', 108, 205, 'X', 1),
-('', 71, 106, 'LO', 5),
-('', 109, 70, 'X', 1),
-('', 76, 107, 'H', 3),
-('', 76, 108, 'H', 2),
-('', 106, 74, 'X', 1),
-('', 106, 87, 'X', 1),
-('', 107, 109, 'H', 4),
-('', 107, 108, 'H', 10),
-('', 107, 106, 'H', 11);
-
 -- --------------------------------------------------------
 
 --
@@ -509,16 +328,16 @@ INSERT INTO `currentcarorders` (`ID`, `Origin`, `Destination`, `CarType`, `Qty`)
 --
 
 CREATE TABLE `districts` (
-  `DistrictID` int(2) DEFAULT NULL,
-  `DistrictName` varchar(16) DEFAULT NULL,
-  `DistrictColor` varchar(2) DEFAULT NULL
+  `ID` int(2) DEFAULT NULL,
+  `Name` varchar(16) DEFAULT NULL,
+  `Color` varchar(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `districts`
 --
 
-INSERT INTO `districts` (`DistrictID`, `DistrictName`, `DistrictColor`) VALUES
+INSERT INTO `districts` (`ID`, `Name`, `Color`) VALUES
 (1, 'Pittsburgh', 'GY'),
 (2, 'Gilberton', 'DB'),
 (3, 'Gladstone Branch', 'PK'),
@@ -537,9 +356,9 @@ INSERT INTO `districts` (`DistrictID`, `DistrictName`, `DistrictColor`) VALUES
 --
 
 CREATE TABLE `industries` (
-  `IndustryID` int(3) DEFAULT NULL,
+  `ID` int(3) DEFAULT NULL,
   `Milepost` int(4) DEFAULT NULL,
-  `IndustryName` varchar(25) DEFAULT NULL,
+  `Name` varchar(25) DEFAULT NULL,
   `Town` int(2) DEFAULT NULL,
   `District` int(1) DEFAULT NULL,
   `IndustryColor` varchar(2) DEFAULT NULL,
@@ -552,7 +371,7 @@ CREATE TABLE `industries` (
 -- Dumping data for table `industries`
 --
 
-INSERT INTO `industries` (`IndustryID`, `Milepost`, `IndustryName`, `Town`, `District`, `IndustryColor`, `Railroad`, `Car Capacity`, `Photo`) VALUES
+INSERT INTO `industries` (`ID`, `Milepost`, `Name`, `Town`, `District`, `IndustryColor`, `Railroad`, `Car Capacity`, `Photo`) VALUES
 (146, 3201, 'Creamery (Inbound)', 5, 4, 'RD', 2, 16, ''),
 (207, 3207, 'Inbound Sand', 7, 4, 'BR', 2, 0, ''),
 (212, 4405, 'TN Interchange', 16, 3, 'GY', 1, 0, ''),
@@ -682,16 +501,16 @@ INSERT INTO `railroads` (`RailroadID`, `RailroadName`, `RailroadAbbreviation`) V
 --
 
 CREATE TABLE `towns` (
-  `TownID` int(2) DEFAULT NULL,
-  `TownName` varchar(20) DEFAULT NULL,
-  `TownColor` varchar(2) DEFAULT NULL
+  `ID` int(2) DEFAULT NULL,
+  `Name` varchar(20) DEFAULT NULL,
+  `Color` varchar(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `towns`
 --
 
-INSERT INTO `towns` (`TownID`, `TownName`, `TownColor`) VALUES
+INSERT INTO `towns` (`ID`, `Name`, `Color`) VALUES
 (1, 'Trenton', 'BK'),
 (2, 'Harbourton', 'BL'),
 (3, 'Ringoes', 'GR'),
